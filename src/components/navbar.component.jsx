@@ -6,7 +6,9 @@ const Navbar = () => {
     <Fragment>
       <div className='flex justify-between items-center w-full h-20 text-white bg-black fixed px-4'>
         <div>
-          <h1 className='p-1 text-5xl ml-2 font-signature text-white'>Vinod</h1>
+          <h1 className='p-1 text-5xl ml-2 font-signature text-white'>
+            Vinod Kotagiri
+          </h1>
         </div>
         <ul className='hidden md:flex '>
           <li className='px-4 uppercase cursor-pointer hover:scale-110 duration-300 hover:text-orange-500'>
