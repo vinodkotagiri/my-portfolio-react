@@ -41,7 +41,7 @@ const Navbar = () => {
         </li>
         <li className='py-3'>
           <a
-            href='!#'
+            href='/about'
             className='mx-4 my-6 md:my-0 text-xl font-thin text-gray-300 uppercase hover:text-blue-400 duration-500'
           >
             about

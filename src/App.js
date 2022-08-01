@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hero, Navbar } from './components'
+import { About, Hero, Navbar } from './components'
 import { Routes, Route } from 'react-router-dom'
 const App = () => {
     return (
@@ -7,6 +7,7 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path='/' element={<Hero />} />
+                <Route path='/about' element={<About />} />
             </Routes>
         </div >
     )

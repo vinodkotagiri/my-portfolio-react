@@ -4,7 +4,7 @@ import { HiThumbUp } from 'react-icons/hi';
 import './hero.style.css';
 const Hero = () => {
   return (
-    <div>
+    <div className='h-screen'>
       <div className='mobile-container flex flex-col justify-center items-center md:hidden'>
         <div className='hero-title text-4xl'>
           <p className='flex flex-row justify-center'>I'm</p>
