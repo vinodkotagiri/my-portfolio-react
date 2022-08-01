@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 const Navbar = () => {
   const [toggleBtn, setToggleBtn] = useState(false);
-  const [opacity, setOpacity] = useState(0);
+  const [flag, setFlag] = useState('hidden');
   const toggleMenu = () => {
     setToggleBtn(!toggleBtn);
-    opacity === 1 ? setOpacity(0) : setOpacity(1);
+    setFlag(flag === 'hidden' ? '' : 'hidden');
   };
 
   return (
@@ -17,23 +17,23 @@ const Navbar = () => {
         {!toggleBtn ? (
           <FaBars
             size={32}
-            className='text-gray-300 md:hidden cursor-pointer'
+            className='text-gray-300 md:hidden cursor-pointer mr-8'
             onClick={() => toggleMenu()}
           />
         ) : (
           <FaTimes
             size={32}
-            className='text-gray-300 md:hidden cursor-pointer'
+            className='text-gray-300 md:hidden cursor-pointer mr-8'
             onClick={() => toggleMenu()}
           />
         )}
       </div>
       <ul
-        className={`text-right md:flex md:items-center md:z-auto md:static absolute w-full px-10 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-${opacity} transition-all ease-in duration-200`}
+        className={`bg-gray-900 md:bg-black text-right md:flex md:items-center md:z-auto md:static absolute w-full px-10 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${flag} transition-all ease-in duration-200`}
       >
         <li className='py-3'>
           <a
-            href='!#'
+            href='/'
             className=' mx-4 my-6 md:my-0 md:py-6 text-xl font-thin text-gray-300 uppercase hover:text-blue-400 duration-500'
           >
             home
