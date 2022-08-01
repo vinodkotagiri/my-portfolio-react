@@ -17,13 +17,13 @@ const Navbar = () => {
         {!toggleBtn ? (
           <FaBars
             size={32}
-            className='text-white md:hidden cursor-pointer'
+            className='text-gray-300 md:hidden cursor-pointer'
             onClick={() => toggleMenu()}
           />
         ) : (
           <FaTimes
             size={32}
-            className='text-white md:hidden cursor-pointer'
+            className='text-gray-300 md:hidden cursor-pointer'
             onClick={() => toggleMenu()}
           />
         )}
