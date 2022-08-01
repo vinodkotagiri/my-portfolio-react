@@ -6,6 +6,7 @@
 @layer base {
     html {
         font-family: 'Azeret Mono', monospace;
+        color: #fff;
     }
 
     body {

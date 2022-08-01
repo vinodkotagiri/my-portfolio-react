@@ -1,10 +1,13 @@
 import React from 'react'
-import { Navbar } from './components'
+import { Hero, Navbar } from './components'
+import { Routes, Route } from 'react-router-dom'
 const App = () => {
     return (
         <div className='flex flex-col'>
             <Navbar />
-            <div className='text-white'>This is body</div>
+            <Routes>
+                <Route path='/' element={<Hero />} />
+            </Routes>
         </div >
     )
 }

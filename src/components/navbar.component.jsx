@@ -3,14 +3,11 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 const Navbar = () => {
   const [toggleBtn, setToggleBtn] = useState(false);
   const [opacity, setOpacity] = useState(0);
-  const openMenu = () => {
+  const toggleMenu = () => {
     setToggleBtn(!toggleBtn);
-    setOpacity(1);
+    opacity === 1 ? setOpacity(0) : setOpacity(1);
   };
-  const closeMenu = () => {
-    setToggleBtn(!toggleBtn);
-    setOpacity(opacity - 1);
-  };
+
   return (
     <nav className='p-5 bg-transparent md:flex md:items-center md:justify-between'>
       <div className='flex flex-row justify-between'>
@@ -21,20 +18,18 @@ const Navbar = () => {
           <FaBars
             size={32}
             className='text-white md:hidden cursor-pointer'
-            onClick={() => openMenu()}
+            onClick={() => toggleMenu()}
           />
         ) : (
           <FaTimes
             size={32}
             className='text-white md:hidden cursor-pointer'
-            onClick={() => closeMenu()}
+            onClick={() => toggleMenu()}
           />
         )}
       </div>
       <ul
-        className={`text-right md:flex md:items-center   md:z-auto md:static absolute 
-      w-full px-10 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-${opacity}  
-       transition-all ease-in duration-200`}
+        className={`text-right md:flex md:items-center md:z-auto md:static absolute w-full px-10 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-${opacity} transition-all ease-in duration-200`}
       >
         <li className='py-3'>
           <a
