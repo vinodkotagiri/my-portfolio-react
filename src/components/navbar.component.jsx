@@ -5,11 +5,11 @@ const Navbar = () => {
   const [opacity, setOpacity] = useState(0);
   const openMenu = () => {
     setToggleBtn(!toggleBtn);
-    setOpacity(100);
+    setOpacity(1);
   };
   const closeMenu = () => {
     setToggleBtn(!toggleBtn);
-    setOpacity(0);
+    setOpacity(opacity - 1);
   };
   return (
     <nav className='p-5 bg-transparent md:flex md:items-center md:justify-between'>
@@ -32,46 +32,46 @@ const Navbar = () => {
         )}
       </div>
       <ul
-        className={`md:flex md:items-center   md:z-auto md:static absolute 
-      w-full left-[320px] md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-${opacity}  
+        className={`text-right md:flex md:items-center   md:z-auto md:static absolute 
+      w-full px-10 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-${opacity}  
        transition-all ease-in duration-200`}
       >
-        <li>
+        <li className='py-3'>
           <a
             href='!#'
-            className=' mx-4 my-6 md:my-0 text-xl text-gray-300 uppercase hover:text-blue-400 duration-500'
+            className=' mx-4 my-6 md:my-0 md:py-6 text-xl font-thin text-gray-300 uppercase hover:text-blue-400 duration-500'
           >
             home
           </a>
         </li>
-        <li>
+        <li className='py-3'>
           <a
             href='!#'
-            className='mx-4 my-6 md:my-0 text-xl text-gray-300 uppercase hover:text-blue-400 duration-500'
+            className='mx-4 my-6 md:my-0 text-xl font-thin text-gray-300 uppercase hover:text-blue-400 duration-500'
           >
             about
           </a>
         </li>
-        <li>
+        <li className='py-3'>
           <a
             href='!#'
-            className='mx-4 my-6 md:my-0 text-xl text-gray-300 uppercase hover:text-blue-400 duration-500'
+            className='mx-4 my-6 md:my-0 text-xl md:py-6 font-thin text-gray-300 uppercase hover:text-blue-400 duration-500'
           >
             skills
           </a>
         </li>
-        <li>
+        <li className='py-3'>
           <a
             href='!#'
-            className='mx-4 my-6 md:my-0 text-xl text-gray-300 uppercase hover:text-blue-400 duration-500'
+            className='mx-4 my-6 md:my-0 text-xl md:py-6 font-thin text-gray-300 uppercase hover:text-blue-400 duration-500'
           >
             portfolio
           </a>
         </li>
-        <li>
+        <li className='py-3'>
           <a
             href='!#'
-            className='mx-4 my-6 md:my-0 text-xl text-gray-300 uppercase hover:text-blue-400 duration-500'
+            className='mx-4 my-6 md:my-0 text-xl md:py-6 font-thin text-gray-300 uppercase hover:text-blue-400 duration-500'
           >
             contact
           </a>
