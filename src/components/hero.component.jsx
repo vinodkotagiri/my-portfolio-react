@@ -1,8 +1,10 @@
 import React from 'react';
 import { MdVisibility } from 'react-icons/md';
 import { HiThumbUp } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
 import './hero.style.css';
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className='h-screen'>
       <div className='mobile-container flex flex-col justify-center items-center md:hidden'>
@@ -20,11 +22,17 @@ const Hero = () => {
           </p>
         </div>
         <div className='flex flex-col py-3'>
-          <button className='py-3 my-3 font-semibold flex items-center bg-gray-800 px-6 rounded-3xl text-blue-400 shadow-md  shadow-blue-400'>
+          <button
+            onClick={() => navigate('portfolio')}
+            className='py-3 my-3 font-semibold flex items-center bg-gray-800 px-6 rounded-3xl text-blue-400 shadow-md  shadow-blue-400'
+          >
             Portfolio
             <MdVisibility size={18} className='mx-3 text-blue-400' />
           </button>
-          <button className='py-3 my-3 font-semibold flex items-center bg-gray-800 px-6 rounded-3xl text-green-400 shadow-md shadow-green-400'>
+          <button
+            onClick={() => navigate('contact')}
+            className='py-3 my-3 font-semibold flex items-center bg-gray-800 px-6 rounded-3xl text-green-400 shadow-md shadow-green-400'
+          >
             Hire Me!
             <HiThumbUp size={18} className='mx-3 text-green-400' />
           </button>
@@ -43,11 +51,17 @@ const Hero = () => {
               scalable and maintainable web apps
             </p>
             <div className='flex flex-row gap-12 my-12'>
-              <button className='hover:scale-105 hover:text-green-800 ease-in duration-200 py-3 my-3 font-semibold flex items-center bg-gray-800 px-6 rounded-3xl text-blue-400 shadow-md  shadow-blue-400'>
+              <button
+                onClick={() => navigate('portfolio')}
+                className='hover:scale-105 hover:text-green-800 ease-in duration-200 py-3 my-3 font-semibold flex items-center bg-gray-800 px-6 rounded-3xl text-blue-400 shadow-md  shadow-blue-400'
+              >
                 Portfolio
                 <MdVisibility size={18} className='mx-3 text-blue-400' />
               </button>
-              <button className=' hover:scale-105 hover:text-green-800 ease-in duration-200py-3 my-3 font-semibold flex items-center bg-gray-800 px-6 rounded-3xl text-green-400 shadow-md shadow-green-400'>
+              <button
+                onClick={() => navigate('contact')}
+                className=' hover:scale-105 hover:text-green-800 ease-in duration-200py-3 my-3 font-semibold flex items-center bg-gray-800 px-6 rounded-3xl text-green-400 shadow-md shadow-green-400'
+              >
                 Hire Me!
                 <HiThumbUp size={18} className='mx-3 text-green-400' />
               </button>

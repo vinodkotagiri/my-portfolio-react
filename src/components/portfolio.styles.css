@@ -1,0 +1,24 @@
+.portfolio {
+    background-color: white;
+}
+
+.btn {
+    border: 1px solid white;
+    display: inline-flex;
+    padding: 0.5em;
+    margin: 1rem;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 4px 1px whitesmoke;
+}
+
+.btn-code {
+    color: ghostwhite;
+    background-color: gray;
+}
+
+.btn-demo {
+    color: ghostwhite;
+    background-color: green;
+}
